@@ -11,7 +11,7 @@
 
 <body style="margin: 0; background-color: #000000;">
 	<!-- HEADER -->
-	<div id="header" style="z-index: 50; padding-top: 20vh; padding-bottom: 20vh;">
+	<div id="header" style="z-index: 50; padding-top: 20vh; padding-bottom: 20vh; width: 100vw;">
 		<div style="width: 100%; position: relative; padding: 5vh 0;">
 			<div style="width: 100vw;">
 				<img src="img/ETS2MCG.png" style="height: 20vh; margin: 0 auto; padding: 0 5vw; display: block;">
@@ -38,8 +38,8 @@
 		setTimeout(() => $("#slideshow").fadeIn(500), 300);
 		let resized = () => {
 			let slideshow = $("#slideshow");
-			let width = $("#header").width();
-			let height = $("#header").height();
+			let width = $("#header").outerWidth();
+			let height = $("#header").outerHeight();
 
 			slideshow.width(width)
 			slideshow.height(height)
