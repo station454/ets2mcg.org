@@ -88,14 +88,6 @@ p {
     text-indent: 15px;
 }
 
-.mcglogo {
-    width: 2rem;
-    padding: 0;
-    margin: 0 10;
-    position: absolute;
-    top: 3px;
-}
-
 #slideshow::after {
     content: " ";
     z-index: 10;
@@ -158,6 +150,19 @@ ul#menubar > li.current {
     line-height: 1;
 }
 
+.mcglogo {
+    width: 10em !important;
+}
+
+.mcglogo > a > img {
+    width: 1rem;
+    padding: 0;
+    margin: 0 10;
+    position: absolute;
+    top: 0.7rem;
+    transform: scale(1.5);
+}
+
 @media(max-width:1300px) {
     * {
         font-size: 40;
@@ -187,6 +192,6 @@ ul#menubar > li.current {
         float: left;
     }
     .mcglogo {
-        width: 1.2rem;
+        width: 90%;
     }
 }
