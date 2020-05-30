@@ -50,6 +50,28 @@ footer {
     color: #aaaaaa;
 }
 
+a.text {
+    text-decoration: none;
+    cursor: crosshair;
+    user-select: none;
+}
+
+a.text:link {
+    color: greenyellow;
+}
+
+a.text:visited {
+    color: greenyellow;
+}
+
+a.text:hover {
+    color: gold;
+}
+
+a.text:active {
+    cursor: pointer;
+}
+
 a.foot {
     text-decoration: none;
     cursor: not-allowed;
