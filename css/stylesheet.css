@@ -138,7 +138,8 @@ a.member {
     }
     ul#menubar > li {
         font-size: 50;
-        width: 100%;
+        padding: 14 16 30 16;
+        width: 90%;
         float: left;
     }
 }
