@@ -63,7 +63,8 @@ a.foot:active {
 }
 
 .contentheader {
-    font-size: 70;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50;
     font-weight: 900;
 }
 
@@ -73,5 +74,8 @@ a.foot:active {
     }
     div.pagecontent {
         width: calc(100vw - 100px);
+    }
+    .contentheader {
+        font-size: 80;
     }
 }
