@@ -26,7 +26,7 @@ div.centertext {
 }
 
 div.pagecontent {
-    padding: 50;
+    padding: 20px 50px 30px 50px;
     display: block;
     margin: 0 auto;
     background-color: #111111;
@@ -66,10 +66,26 @@ a.foot:active {
     cursor: crosshair;
 }
 
-.contentheader {
+h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 50;
     font-weight: 900;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40;
+    font-weight: 900;
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35;
+    font-weight: 900;
+}
+
+p {
+    text-indent: 15px;
 }
 
 #slideshow::after {
@@ -121,7 +137,7 @@ ul#menubar > li.right {
 ul#menubar > li:hover {
     background-color: #000000;
 }
-a.member {
+.member {
     text-decoration: none;
     line-height: 1;
 }
@@ -133,8 +149,17 @@ a.member {
     div.pagecontent {
         width: calc(100% - 100px);
     }
-    .contentheader {
+    h1 {
         font-size: 80;
+    }
+    h2 {
+        font-size: 65;
+    }
+    h3 {
+        font-size: 55;
+    }
+    p {
+        text-indent: 35px;
     }
     ul#menubar {
         width: 90%;
