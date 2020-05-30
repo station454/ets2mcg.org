@@ -88,6 +88,14 @@ p {
     text-indent: 15px;
 }
 
+.mcglogo {
+    width: 2rem;
+    padding: 0;
+    margin: 0 10;
+    position: absolute;
+    top: 3px;
+}
+
 #slideshow::after {
     content: " ";
     z-index: 10;
@@ -111,6 +119,8 @@ img.imgSlide {
     transform: scale(1.1);
     filter: blur(10px);
     overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 img {
@@ -175,5 +185,8 @@ ul#menubar > li.current {
         padding: 14 16;
         width: 90%;
         float: left;
+    }
+    .mcglogo {
+        width: 1.2rem;
     }
 }
