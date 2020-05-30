@@ -94,6 +94,10 @@ img.imgSlide {
     display: none;
 }
 
+img {
+    user-select: none;
+}
+
 @media(max-width:1300px) {
     * {
         font-size: 40;
