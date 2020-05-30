@@ -54,6 +54,7 @@ a.text {
     text-decoration: none;
     cursor: crosshair;
     user-select: none;
+    color: greenyellow;
 }
 
 a.text:link {
