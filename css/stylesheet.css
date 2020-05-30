@@ -108,6 +108,9 @@ img.imgSlide {
     top: 0px;
     left: 0px;
     display: none;
+    transform: scale(1.1);
+    filter: blur(10px);
+    overflow: hidden;
 }
 
 img {
@@ -143,11 +146,6 @@ ul#menubar > li.current {
 .member {
     text-decoration: none;
     line-height: 1;
-}
-
-.imgSlide {
-    transform: scale(1.1);
-    filter: blur(10px);
 }
 
 @media(max-width:1300px) {
