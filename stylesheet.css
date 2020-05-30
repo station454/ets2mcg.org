@@ -48,6 +48,7 @@ footer {
 a.foot {
     text-decoration: none;
     cursor: not-allowed;
+    user-select: none;
 }
 a.foot:link {
     color: white;
