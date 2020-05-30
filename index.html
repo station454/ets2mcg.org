@@ -11,19 +11,41 @@
 
 <body style="margin: 0; background-color: #000000;">
 	<!-- HEADER -->
-	<div style="background-color: black; width: 100%; position: relative; padding: 5vh 0;">
-		<div style="width: 100vw;">
-			<img src="img/ETS2MCG.png" style="height: 20vh; margin: 0 auto; padding: 0 5vw; display: block;">
-		</div>
-		<div style="width: 100%; text-align: center; margin-top: 3vh;">
-			<div class="teamtitle centertext">
-				ETS2MCG
+	<div id="header" style="z-index: 50;">
+		<div style="width: 100%; position: relative; padding: 5vh 0;">
+			<div style="width: 100vw;">
+				<img src="img/ETS2MCG.png" style="height: 20vh; margin: 0 auto; padding: 0 5vw; display: block;">
 			</div>
-			<div class="teamtext centertext">
-				We are family.
+			<div style="width: 100%; text-align: center; margin-top: 3vh;">
+				<div class="teamtitle centertext">
+					ETS2MCG
+				</div>
+				<div class="teamtext centertext">
+					We are family.
+				</div>
 			</div>
 		</div>
 	</div>
+	<div id="slideshow" style="position: absolute; background-color: red; z-index: -10;">
+
+	</div>
+
+	<script>
+		let resized = () => {
+			console.log("resized")
+			let slideshow = $("#slideshow");
+			let width = $("#header").outerWidth();
+			let height = $("#header").outerHeight();
+
+			slideshow.width(width)
+			slideshow.height(height)
+
+			slideshow.css("top", $("#header").position().top)
+		};
+		window.onresize = resized;
+		resized();
+	</script>
+
 	<div style="width: 100%; background-color: #222222;">
 		<div class="pagecontent">
 			ETS2MCG - Asia Team with many countries: Vietnam, Thailand, Korea, Japan, Indonesia, Malaysia, China.

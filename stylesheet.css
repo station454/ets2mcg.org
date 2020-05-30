@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 * {
     color: white;
 
@@ -67,6 +70,18 @@ a.foot:active {
     font-family: 'Times New Roman', Times, serif;
     font-size: 50;
     font-weight: 900;
+}
+
+#slideshow::after {
+    content: " ";
+    z-index: 10;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 @media(max-width:1300px) {
