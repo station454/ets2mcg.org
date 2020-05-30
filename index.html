@@ -62,15 +62,15 @@
 				for (i = 0; i < x.length; i++) {
 					let jq = $(x[i]);
 					if (!first)
-						jq.fadeOut(1000);
+						jq.fadeOut(2000);
 				}
-				if (first) first = false;
 				slideIndex++;
 				if (slideIndex > x.length) { slideIndex = 1 }
-				$(x[slideIndex - 1]).fadeIn(1000);
+				$(x[slideIndex - 1]).fadeIn(2000);
+				if (first) first = false;
 			}
 
-			setTimeout(carousel, 4000); // Change image every 2 seconds
+			setTimeout(carousel, 7000); // Change image every 2 seconds
 		}
 	</script>
 

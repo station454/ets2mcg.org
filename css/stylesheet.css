@@ -145,6 +145,11 @@ ul#menubar > li.current {
     line-height: 1;
 }
 
+.imgSlide {
+    transform: scale(1.1);
+    filter: blur(10px);
+}
+
 @media(max-width:1300px) {
     * {
         font-size: 40;
