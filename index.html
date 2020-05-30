@@ -105,6 +105,22 @@
 			</ol>
 		</div>
 	</div>
+
+	<script>
+        let content = $(".pagecontent")
+        content.children().each((index, c) => {
+            let jq = $(c);
+            jq.css("opacity", "0")
+            setTimeout(() => {
+                jq.css({
+                    opacity: "1.0",
+                    display: "none"
+                })
+                jq.fadeIn(1000)
+            }, 100 * index);
+        })
+    </script>
+
 	<footer>
 		<p>
 			Copyright ⓒ 2020 ETS2MCG. All rights reserved.

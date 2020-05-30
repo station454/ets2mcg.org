@@ -12,10 +12,12 @@
 <body style="margin: 0; background-color: #000000;">
     <div style="width: 100%; background-color: #333333;">
         <ul id="menubar">
-            <li style="width: 240px;"><a href="index.html" class="member"><img src="img/ETS2MCG.png" style="width: 2rem; padding: 0; margin: 0 10; position: absolute; top: 3px;"><span style="position: relative; left: 3rem;">ETS2MCG</span></a></li>
+            <li style="width: 240px;"><a href="index.html" class="member"><img src="img/ETS2MCG.png"
+                        style="width: 2rem; padding: 0; margin: 0 10; position: absolute; top: 3px;"><span
+                        style="position: relative; left: 3rem;">ETS2MCG</span></a></li>
             <li><a href="apply.html" class="member">Apply Now</a></li>
-			<li class="current"><a href="privacy.html" class="member">Privacy Policy</a></li>
-			<li><a href="rules.html" class="member">VTC Rules</a></li>
+            <li class="current"><a href="privacy.html" class="member">Privacy Policy</a></li>
+            <li><a href="rules.html" class="member">VTC Rules</a></li>
         </ul>
     </div>
 
@@ -25,6 +27,22 @@
             <p>To be added later.</p>
         </div>
     </div>
+
+    <script>
+        let content = $(".pagecontent")
+        content.children().each((index, c) => {
+            let jq = $(c);
+            jq.css("opacity", "0")
+            setTimeout(() => {
+                jq.css({
+                    opacity: "1.0",
+                    display: "none"
+                })
+                jq.fadeIn(1000)
+            }, 100 * index);
+        })
+    </script>
+
     <footer>
         <p>
             Copyright ⓒ 2020 ETS2MCG. All rights reserved.
