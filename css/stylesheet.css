@@ -131,7 +131,7 @@ a.member {
         font-size: 40;
     }
     div.pagecontent {
-        width: calc(100vw - 100px);
+        width: calc(100% - 100px);
     }
     .contentheader {
         font-size: 80;
