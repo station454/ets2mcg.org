@@ -137,6 +137,9 @@ ul#menubar > li.right {
 ul#menubar > li:hover {
     background-color: #000000;
 }
+ul#menubar > li.current {
+    background-color: olive;
+}
 .member {
     text-decoration: none;
     line-height: 1;
