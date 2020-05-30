@@ -22,9 +22,12 @@ div.pagecontent {
     background-color: #111111;
     color: white;
     width: 1000px;
+
+    font-size: 20;
 }
 @media(max-width:1300px){
     div.pagecontent {
+        font-size: 40;
         width: calc(100vw - 100px);
     }
 }
