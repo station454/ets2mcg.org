@@ -108,11 +108,6 @@ img.imgSlide {
     top: 0px;
     left: 0px;
     display: none;
-    transform: scale(1.1);
-    filter: blur(10px);
-    overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 img {
