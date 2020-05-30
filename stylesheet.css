@@ -98,6 +98,34 @@ img {
     user-select: none;
 }
 
+ul#menubar {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+    width: calc(1100px + 40px);
+    display: block;
+    margin: 0 auto;
+}
+ul#menubar > li {
+    padding: 14 16;
+    box-sizing: inherit;
+    float: left;
+    width: auto;
+    color: white;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul#menubar > li.right {
+    float: right;
+}
+ul#menubar > li:hover {
+    background-color: #000000;
+}
+a.member {
+    text-decoration: none;
+    line-height: 1;
+}
+
 @media(max-width:1300px) {
     * {
         font-size: 40;
@@ -107,5 +135,10 @@ img {
     }
     .contentheader {
         font-size: 80;
+    }
+    ul#menubar > li {
+        font-size: 50;
+        width: 100%;
+        float: left;
     }
 }
