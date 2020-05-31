@@ -28,7 +28,7 @@ div.centertext {
 }
 
 div.pagecontent {
-    padding: 20px 50px 30px 50px;
+    padding: 20px 50px 20px 50px;
     display: block;
     margin: 0 auto;
     background-color: #111111;
@@ -99,18 +99,21 @@ h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 50;
     font-weight: 900;
+    margin: 0;
 }
 
 h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 40;
     font-weight: 900;
+    margin: 0;
 }
 
 h3 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 35;
     font-weight: 900;
+    margin: 0;
 }
 
 p {
@@ -196,6 +199,10 @@ span.mcglogotext {
     position: absolute;
     top: 0.7rem;
     transform: scale(1.5);
+}
+
+div.fullscreen {
+    width: 100%;
 }
 
 @media(max-width:1300px) {
