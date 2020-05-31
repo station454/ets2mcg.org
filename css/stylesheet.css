@@ -58,7 +58,7 @@ a {
 
 a.text {
     text-decoration: none;
-    cursor: crosshair;
+    cursor: pointer;
     user-select: none;
     color: greenyellow;
 }
@@ -75,13 +75,28 @@ a.text:hover {
     color: gold;
 }
 
-a.text:active {
+a.sns {
+    text-decoration: none;
     cursor: pointer;
+    user-select: none;
+    color: white;
+}
+
+a.sns:link {
+    color: white;
+}
+
+a.sns:visited {
+    color: white;
+}
+
+a.sns:hover {
+    color: gold;
 }
 
 a.foot {
     text-decoration: none;
-    cursor: not-allowed;
+    cursor: pointer;
     user-select: none;
 }
 
