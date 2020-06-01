@@ -4,15 +4,22 @@
     <meta charset="UTF8" />
     <title>Rules | ETS2MCG</title>
     <!-- to prevent stylesheet cacheing, change the value after ?nocache -->
-    <link rel="stylesheet" href="css/stylesheet.css?nocache2dd3sddshbddasdfd9sd">
+    <link rel="stylesheet" href="css/stylesheet.css?nocache2dd3sddshbdsafdasdfd9sd">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#f7d331">
+    <meta property="og:site_name" content="ETS2MCG" />
+    <meta property="og:title" content="Rules | ETS2MCG" />
+    <meta property="og:description"
+        content="ETS2MCG Team was established in 2016. We are an Asian Team with many countries. We are family!" />
+    <meta property="og:image" content="https://ets2mcg.com/img/ETS2MCG.png" />
     <script src="js/jquery-3.5.1.min.js"></script>
 </head>
 
 <body style="margin: 0; background-color: #000000;">
     <div style="width: 100%; background-color: #333333;">
         <ul id="menubar">
-            <li class="mcglogo"><a href="index.html" class="member"><img src="img/ETS2MCG.png"><span class="mcglogotext">ETS2MCG</span></a></li>
+            <li class="mcglogo"><a href="index.html" class="member"><img src="img/ETS2MCG.png"><span
+                        class="mcglogotext">ETS2MCG</span></a></li>
             <li><a href="privacy.html" class="member">Privacy Policy</a></li>
             <li class="current"><a href="rules.html" class="member">VTC Rules</a></li>
         </ul>
@@ -46,18 +53,23 @@
     </div>
 
     <script>
-        let content = $(".pagecontent")
-        content.children().each((index, c) => {
-            let jq = $(c);
-            jq.css("opacity", "0")
-            setTimeout(() => {
-                jq.css({
-                    opacity: "1.0",
-                    display: "none"
-                })
-                jq.fadeIn(1000)
-            }, 100 * index);
+        $(".pagecontent>*").each((i, value) => {
+            $(value).css("opacity", "0")
         })
+        function calcScroll() {
+            $(".pagecontent>*").each((i, value) => {
+                var bounding = value.getBoundingClientRect();
+
+                if (bounding.top < window.innerHeight && bounding.bottom > 0) {
+                    $(value).addClass("fadeAnimation")
+                    $(value).css("opacity", "");
+                }
+            })
+        }
+        setTimeout(() => {
+            $(window).scroll(calcScroll)
+            calcScroll();
+        }, 100)
     </script>
 
     <footer>

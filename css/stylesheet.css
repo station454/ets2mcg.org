@@ -231,11 +231,47 @@ div.fullscreen {
 }
 
 .typing {
-    
+    color: white;
+    animation-duration: 1s;
+    animation-name: textCursor;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes textCursor {
+    13% {
+        opacity: 1;
+    }
+    37% {
+        opacity: 1;
+    }
+    63% {
+        opacity: 0;
+    }
+    87% {
+        opacity: 0;
+    }
+}
+
+.fadeAnimation {
+    animation-duration: 1s;
+    animation-name: slidefromleft;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes slidefromleft {
+    from {
+        transform: translateX(-5vw);
+        opacity: 0.0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @media(max-width:1300px) {
-    * {
+    body {
         font-size: 40;
     }
     div.pagecontent {
