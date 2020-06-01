@@ -143,6 +143,11 @@
 			<p>ETS2MCG team has Facebook group, YouTube channel, Steam group. We hope to see you there!</p>
 			<br>
 		</div>
+		<div class="pagecontent" style="background-color: #333333;">
+			<a class="sns" target="_blank" href="https://truckersmp.com/vtc/387">
+				<h3>ETS2MCG TruckersMP VTC Page</h3>
+			</a>
+		</div>
 		<div class="pagecontent" style="background-color: #00235e;">
 			<a class="sns" target="_blank" href="https://www.facebook.com/groups/ETS2MCG/">
 				<h3>ETS2MCG Group on Facebook</h3>
@@ -174,7 +179,6 @@
 		function calcScroll() {
 			$(".pagecontent").each((i, value) => {
 				var bounding = value.getBoundingClientRect();
-				console.log(bounding.bottom)
 
 				if (bounding.top < window.innerHeight && bounding.bottom > 0) {
 					$(value).addClass("fadeAnimation")

@@ -126,7 +126,6 @@
         function calcScroll() {
             $(".pagecontent>*").each((i, value) => {
                 var bounding = value.getBoundingClientRect();
-                console.log(bounding.bottom)
 
                 if (bounding.top < window.innerHeight && bounding.bottom > 0) {
                     $(value).addClass("fadeAnimation")
