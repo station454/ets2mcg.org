@@ -38,7 +38,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="slideshow" style="position: absolute; background-color: black; z-index: -10; display: none;">
+	<div id="slideshow" style="position: absolute; background-color: black; z-index: -10; display: block;">
 		<img class="imgSlide" src="img/slides/1.png" />
 		<img class="imgSlide" src="img/slides/2.png" />
 		<img class="imgSlide" src="img/slides/3.png" />
@@ -47,7 +47,6 @@
 	</div>
 
 	<script>
-		setTimeout(() => $("#slideshow").fadeIn(500), 300);
 		let resized = () => {
 			let slideshow = $("#slideshow");
 			let width = $("#header").outerWidth();
@@ -61,6 +60,14 @@
 		window.onresize = resized;
 		resized();
 
+		{
+			var x = document.getElementsByClassName("imgSlide");
+			for (i = 0; i < x.length; i++) {
+				let jq = $(x[i]);
+				jq.hide();
+			}
+		}
+
 		var slideIndex = 0;
 		carousel();
 
@@ -73,12 +80,23 @@
 				var x = document.getElementsByClassName("imgSlide");
 				for (i = 0; i < x.length; i++) {
 					let jq = $(x[i]);
-					if (!first)
-						jq.fadeOut(2000);
+					if (!first) {
+						jq.addClass("backFadingOut")
+					}
 				}
+				if (slideIndex > x.length) { slideIndex = 0 }
+
+				let prev = slideIndex - 1;
+				if (prev < 0) prev = x.length - 1;
+
+				$(x[prev]).addClass("backFadingOut");
+				$(x[prev]).removeClass("backFadingIn");
+
+				$(x[slideIndex]).show();
+				$(x[slideIndex]).removeClass("backFadingOut");
+				$(x[slideIndex]).addClass("backFadingIn");
+
 				slideIndex++;
-				if (slideIndex > x.length) { slideIndex = 1 }
-				$(x[slideIndex - 1]).fadeIn(2000);
 				if (first) first = false;
 			}
 
