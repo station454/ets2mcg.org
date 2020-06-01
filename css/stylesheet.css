@@ -272,7 +272,7 @@ div.fullscreen {
 
 .backFadingIn {
     opacity: 1;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-name: animatedBackFadingIn;
     animation-timing-function: ease-in-out;
 }
@@ -288,7 +288,7 @@ div.fullscreen {
 
 .backFadingOut {
     opacity: 0;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-name: animatedBackFadingOut;
     animation-timing-function: ease-in-out;
 }
