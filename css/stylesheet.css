@@ -226,6 +226,14 @@ div.fullscreen {
     width: 100%;
 }
 
+.keyword-item {
+    display: none;
+}
+
+.typing {
+    
+}
+
 @media(max-width:1300px) {
     * {
         font-size: 40;

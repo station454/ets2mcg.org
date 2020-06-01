@@ -21,7 +21,16 @@
 					ETS2MCG
 				</div>
 				<div class="teamtext centertext">
-					We are family.
+					&nbsp;<span id="keyword" style="display: none;">We are family.</span>&nbsp;
+					<div class="keyword-item" delay="2000">We are family.</div>
+					<div class="keyword-item" delay="2000">We are together.</div>
+					<div class="keyword-item" delay="2000">We are happy.</div>
+					<div class="keyword-item" delay="1000">We are ETS2MCG.</div>
+					<div class="keyword-item" delay="3000">We are family.</div>
+					<div class="keyword-item" delay="4000">We are always welcome.</div>
+					<div class="keyword-item" delay="5000">You can be part of ETS2MCG.</div>
+					<div class="keyword-item" delay="3000">- ETS2MCG Family</div>
+					<span class="typing">|</span>
 				</div>
 			</div>
 		</div>
@@ -72,6 +81,39 @@
 
 			setTimeout(carousel, 7000); // Change image every 2 seconds
 		}
+	</script>
+
+	<script>
+		let currentKeywordIndex = 0;
+		function keywordTick() {
+			let c = document.getElementsByClassName("keyword-item");
+			let a = $(c[currentKeywordIndex]);
+			let b = $("#keyword")
+
+			let text = a.text();
+			let curText = b.text();
+			let done = false;
+
+			if (!text.startsWith(curText)) {
+				curText = curText.substring(0, curText.length - 1);
+			} else if (text !== curText) {
+				curText += text.substring(curText.length).charAt(0);
+			} else if (text === curText) {
+				done = true;
+			}
+
+			b.text(curText);
+
+			if (done) {
+				currentKeywordIndex++;
+				if (currentKeywordIndex === c.length) currentKeywordIndex = 0;
+				setTimeout(keywordTick, Number(a.attr("delay")));
+			} else {
+				setTimeout(keywordTick, 50);
+			}
+		}
+		setTimeout(() => $("#keyword").fadeIn(500), 2500);
+		setTimeout(keywordTick, 3000);
 	</script>
 
 	<div style="width: 100%; background-color: #333333;">
