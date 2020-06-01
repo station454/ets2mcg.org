@@ -1,44 +1,46 @@
 function initializeScrollWorker(selector) {
-    let scrollWorking = false;
-    let scrollUp = false;
-    $(selector).each((i, value) => {
+    let animating = false;
+    let scrolledUp = false;
+    $(selector).each((_, value) => {
         $(value).css("opacity", "0")
     })
-    function calcScroll(force) {
-        if (force === undefined) force = false;
-        if (scrollWorking && !force) return;
-        scrollWorking = true;
+    function calcScroll(ignoreCurrentWork) {
+        if (ignoreCurrentWork === undefined) ignoreCurrentWork = false;
+        if (animating && !ignoreCurrentWork) return;
+        animating = true;
         let result = false;
-        let tmp = $(selector);
-        console.log(scrollUp);
-        if (scrollUp) tmp = $(tmp.get().reverse())
-        tmp.each((i, value) => {
+
+        let temp = $(selector);
+        if (scrolledUp) temp = $(temp.get().reverse())
+
+        temp.each((_, value) => {
             var bounding = value.getBoundingClientRect();
             let displayed = bounding.top < window.innerHeight && bounding.bottom > 0;
+            let val = $(value);
 
-            if (displayed && !$(value).hasClass("fadeAnimation")) {
-                $(value).addClass("fadeAnimation")
-                $(value).css("opacity", "");
+            if (displayed && !val.hasClass("fadeAnimation")) {
+                val.addClass("fadeAnimation")
+                val.css("opacity", "");
                 setTimeout(() => calcScroll(true), 30);
                 result = true;
                 return false;
             } else if (!displayed) {
-                $(value).removeClass("fadeAnimation").css("opacity", "0")
+                val.removeClass("fadeAnimation").css("opacity", "0")
             }
         })
-        scrollWorking = result;
+        animating = result;
     }
     setTimeout(() => {
         let curTop = 0;
         $(window).scroll(() => {
             let top = $(this).scrollTop();
             if (top > curTop) {
-                scrollUp = false;
+                scrolledUp = false;
             } else {
-                scrollUp = true;
+                scrolledUp = true;
             }
             curTop = top;
-            if (!scrollWorking) {
+            if (!animating) {
                 calcScroll();
             }
         })
