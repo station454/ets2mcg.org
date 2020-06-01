@@ -270,6 +270,10 @@ div.fullscreen {
     }
 }
 
+#header {
+    height: 50vh;
+}
+
 @media(max-width:1300px) {
     body {
         font-size: 40;
@@ -313,5 +317,8 @@ div.fullscreen {
         position: unset;
         top: unset;
         transform: unset;
+    }
+    #header {
+        height: 100vh;
     }
 }
