@@ -84,7 +84,7 @@
 						jq.addClass("backFadingOut")
 					}
 				}
-				if (slideIndex > x.length) { slideIndex = 0 }
+				if (slideIndex === x.length) { slideIndex = 0 }
 
 				let prev = slideIndex - 1;
 				if (prev < 0) prev = x.length - 1;
