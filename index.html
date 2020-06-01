@@ -210,21 +210,34 @@
 	</div>
 
 	<script>
+		let scrollWorking = false;
 		$(".pagecontent").each((i, value) => {
 			$(value).css("opacity", "0")
 		})
-		function calcScroll() {
+		function calcScroll(force) {
+			if (force === undefined) force = false;
+			if (scrollWorking && !force) return;
+			scrollWorking = true;
+			let result = false;
 			$(".pagecontent").each((i, value) => {
 				var bounding = value.getBoundingClientRect();
 
-				if (bounding.top < window.innerHeight && bounding.bottom > 0) {
+				if (bounding.top < window.innerHeight && bounding.bottom > 0 && !$(value).hasClass("fadeAnimation")) {
 					$(value).addClass("fadeAnimation")
 					$(value).css("opacity", "");
+					setTimeout(() => calcScroll(true), 100);
+					result = true;
+					return false;
 				}
 			})
+			scrollWorking = result;
 		}
 		setTimeout(() => {
-			$(window).scroll(calcScroll)
+			$(window).scroll(() => {
+				if(!scrollWorking) {
+					calcScroll();
+				}
+			})
 			calcScroll();
 		}, 100)
 	</script>
