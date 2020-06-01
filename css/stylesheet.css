@@ -226,6 +226,23 @@ div.fullscreen {
     width: 100%;
 }
 
+.fadeAnimation {
+    animation-duration: 1s;
+    animation-name: slidefromleft;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes slidefromleft {
+    from {
+        transform: translateX(-5vw);
+        opacity: 0.0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 @media(max-width:1300px) {
     * {
         font-size: 40;

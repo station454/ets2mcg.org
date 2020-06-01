@@ -4,12 +4,13 @@
 	<meta charset="UTF8" />
 	<title>Home | ETS2MCG</title>
 	<!-- to prevent stylesheet cacheing, change the value after ?nocache -->
-	<link rel="stylesheet" href="css/stylesheet.css?nocache2dd3sddshbddasdfd9sd">
+	<link rel="stylesheet" href="css/stylesheet.css?nocache2dd3sddshbdsafdasdfd9sd">
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
 	<meta name="theme-color" content="#f7d331">
 	<meta property="og:site_name" content="ETS2MCG" />
 	<meta property="og:title" content="Home | ETS2MCG" />
-	<meta property="og:description" content="ETS2MCG Team was established in 2016. We are an Asian Team with many countries. We are family!" />
+	<meta property="og:description"
+		content="ETS2MCG Team was established in 2016. We are an Asian Team with many countries. We are family!" />
 	<meta property="og:image" content="https://ets2mcg.com/img/ETS2MCG.png" />
 	<script src="js/jquery-3.5.1.min.js"></script>
 </head>
@@ -165,6 +166,27 @@
 			ETS2MCG, We are family!
 		</div>
 	</div>
+
+	<script>
+		$(".pagecontent").each((i, value) => {
+			$(value).css("opacity", "0")
+		})
+		function calcScroll() {
+			$(".pagecontent").each((i, value) => {
+				var bounding = value.getBoundingClientRect();
+				console.log(bounding.bottom)
+
+				if (bounding.top < window.innerHeight && bounding.bottom > 0) {
+					$(value).addClass("fadeAnimation")
+					$(value).css("opacity", "");
+				}
+			})
+		}
+		setTimeout(() => {
+			$(window).scroll(calcScroll)
+			calcScroll();
+		}, 100)
+	</script>
 
 	<footer>
 		<p>
