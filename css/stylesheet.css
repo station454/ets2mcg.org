@@ -313,6 +313,11 @@ img.emoji {
     vertical-align: -0.1em;
  }
 
+ .languageflagbutton {
+     padding: 0;
+     font-size: x-large;
+ }
+
 @media(max-width:1300px) {
     body {
         font-size: 40;
