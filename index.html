@@ -141,7 +141,7 @@
 	<div style="width: 100%; background-color: #222222;">
 		<div class="pagecontent langchooser" style="display: block; visibility: hidden; background-color: #bbbbbb; padding: 10px 50px;">
 			<div style="display: block; margin: 0 auto; width: max-content;">
-				<span class="languageflagbutton" style="color: black;">Language</span>
+				<span class="languageflagtitle" style="color: black;">Language</span>
 				<span class="languageflagbutton">🇬🇧</span><span class="languageflagbutton">🇰🇷</span><span class="languageflagbutton">🇨🇳</span><span class="languageflagbutton">🇹🇭</span>
 			</div>
 		</div>
@@ -234,6 +234,11 @@
 
 		twemoji.parse($(".langchooser")[0]);
 		$(".langchooser").css("visibility", "");
+
+		$(".languageflagbutton").hover((obj) => {
+			$(".languageflagbutton").css("z-index", "5");
+			$(obj.currentTarget).css("z-index", "50");
+		})
 	</script>
 
 	<footer>

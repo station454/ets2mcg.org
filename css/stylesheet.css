@@ -311,12 +311,27 @@ img.emoji {
     width: 1em;
     margin: 0 .05em 0 .1em;
     vertical-align: -0.1em;
- }
+}
 
- .languageflagbutton {
-     padding: 0;
-     font-size: x-large;
- }
+.languageflagtitle {
+    color: black;
+    padding: 0;
+    margin-top: -15px;
+    font-size: xx-large;
+}
+
+.languageflagbutton {
+    padding: 0;
+    margin: auto;
+    font-size: xx-large;
+    display: inline-block;
+    transition: transform .4s;
+    position: relative;
+}
+
+.languageflagbutton:hover {
+    transform: scale(1.5);
+}
 
 @media(max-width:1300px) {
     body {
