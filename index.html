@@ -38,13 +38,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="slideshow" style="position: absolute; background-color: black; z-index: -10; display: block;">
-		<img class="imgSlide" src="https://common.ets2mcg.com/img/slides/1.png" />
-		<img class="imgSlide" src="https://common.ets2mcg.com/img/slides/2.png" />
-		<img class="imgSlide" src="https://common.ets2mcg.com/img/slides/3.png" />
-		<img class="imgSlide" src="https://common.ets2mcg.com/img/slides/4.png" />
-		<img class="imgSlide" src="https://common.ets2mcg.com/img/slides/5.png" />
-	</div>
+	<div id="slideshow" style="position: absolute; background-color: black; z-index: -10; display: block;"></div>
 
 	<script>
 		let resized = () => {
@@ -69,10 +63,9 @@
 		}
 
 		var slideIndex = 0;
-		carousel();
-
 		var first = true;
-
+		loadSlideshowSlides();
+		carousel();
 		function carousel() {
 
 			if (!document.hidden) {
@@ -229,7 +222,7 @@
 	</div>
 
 	<script>
-		initializeScrollWorker(".pagecontent")
+		initializeScrollWorker(".pagecontent");
 	</script>
 
 	<footer>
