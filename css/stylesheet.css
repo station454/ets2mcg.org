@@ -318,6 +318,23 @@ img.emoji {
     padding: 0;
     margin-top: -15px;
     font-size: xx-large;
+    display: inline-block;
+
+    animation: languageTitleAnim 1s cubic-bezier(0, 0, 0, 1);
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes languageTitleAnim {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
 }
 
 .languageflagbutton {
@@ -331,6 +348,27 @@ img.emoji {
 
 .languageflagbutton:hover {
     transform: scale(1.5);
+}
+
+.languageflagbutton_loading {
+    animation: languageSlidein 1s cubic-bezier(0, 0, 0, 1);
+    animation-fill-mode: forwards;
+    transform: translateX(10vw);
+    opacity: 0;
+}
+
+@keyframes languageSlidein {
+    0% {
+        transform: translateX(10vw);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @media(max-width:1300px) {
