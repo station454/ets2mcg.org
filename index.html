@@ -41,17 +41,13 @@
 		</div>
 	</div>
 	<!-- The slides will be loaded by script dynamically -->
-	<div id="slideshow" style="position: absolute; background-color: black; z-index: -10; display: block;"></div>
+	<div id="slideshow" style="position: absolute; background-color: black; z-index: -10; display: block; width: 100%;"></div>
 
 	<script>
 		let resized = () => {
 			let slideshow = $("#slideshow");
-			let width = $("#header").outerWidth();
-			let height = $("#header").outerHeight();
 
-			slideshow.width(width)
-			slideshow.height(height)
-
+			slideshow.height($("#header").height());
 			slideshow.css("top", $("#header").position().top)
 		};
 		window.onresize = resized;
