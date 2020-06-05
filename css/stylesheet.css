@@ -375,24 +375,6 @@ img.emoji {
     }
 }
 
-@media(min-width:1700px) {
-    div.pagecontent {
-        width: 1500px;
-    }
-}
-
-@media(min-width:2000px) {
-    div.pagecontent {
-        width: 1800px;
-    }
-}
-
-@media(min-width:2300px) {
-    div.pagecontent {
-        width: 2000px;
-    }
-}
-
 @media(max-width:1300px) {
     :root {
         --pagewidth: 100%;
