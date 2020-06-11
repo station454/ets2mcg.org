@@ -1,0 +1,94 @@
+div.pagecontent.sectionid1 {
+    background-color: #ffd700;
+}
+
+div.pagecontent.sectionid2 {
+    background-color: #00ecf0;
+}
+
+.langChooser {
+    display: block;
+    visibility: hidden;
+    background-color: #eeeeee;
+    padding: 10px 0px;
+}
+
+.languageflagtitle {
+    color: black;
+    padding: 0;
+    margin-top: -15px;
+    font-size: xx-large;
+    display: inline-block;
+    animation: languageTitleAnim 1s cubic-bezier(0, 0, 0, 1);
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes languageTitleAnim {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+.languageflagbutton {
+    padding: 0;
+    margin: auto;
+    font-size: xx-large;
+    display: inline-block;
+    transition: transform .4s;
+    position: relative;
+}
+
+.languageflagbutton:hover {
+    transform: scale(1.5);
+}
+
+.languageflagbutton_loading {
+    animation: languageSlidein 1s cubic-bezier(0, 0, 0, 1);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes languageSlidein {
+    0% {
+        transform: translateX(10vw);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media(max-width:1300px) {
+    .languageflagtitle {
+        font-size: 70;
+    }
+    .languageflagbutton {
+        font-size: 70;
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    div.pagecontent.sectionid1 {
+        background-color: #a38b00;
+    }
+    div.pagecontent.sectionid2 {
+        background-color: #00878a;
+    }
+    .langChooser {
+        background-color: #bebebe;
+    }
+    .languageflagtitle {
+        color: black;
+    }
+}
