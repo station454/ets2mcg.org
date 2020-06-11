@@ -5,7 +5,7 @@
 body {
     overflow-x: hidden;
     color: black;
-    background-color: aaaaaa;
+    background-color: #dfdfdf;
     font-size: 20;
     margin: 0;
 }
@@ -393,8 +393,6 @@ img.emoji {
     }
 }
 
-@media(preferred-color-scheme: dark) {}
-
 @media(max-width:1300px) {
     :root {
         --pagewidth: 100%;
@@ -454,5 +452,46 @@ img.emoji {
     }
     .languageflagbutton {
         font-size: 70;
+    }
+}
+
+@media(prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background-color: black;
+    }
+    footer {
+        background-color: black;
+    }
+    a.foot:link {
+        color: white;
+    }
+    a.foot:visited {
+        color: white;
+    }
+    a.foot:hover {
+        color: wheat;
+    }
+    .dotted::before {
+        color: gray;
+    }
+    .post {
+        background-color: black;
+    }
+    div.pagecontent {
+        background-color: #282828;
+        color: white;
+    }
+    a.text {
+        color: #ffae00;
+    }
+    a.text:link {
+        color: #ffae00;
+    }
+    a.text:visited {
+        color: #ffae00;
+    }
+    a.text:hover {
+        color: #00cf1c;
     }
 }
