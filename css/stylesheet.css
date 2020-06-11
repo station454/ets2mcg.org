@@ -394,6 +394,9 @@ img.emoji {
     footer {
         background-color: black;
     }
+    a {
+        color: white;
+    }
     a.foot:link {
         color: white;
     }
