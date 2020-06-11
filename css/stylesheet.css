@@ -443,4 +443,7 @@ img.emoji {
     ul#menubar>li.current {
         background-color: #ffce5c;
     }
+    #slideshow::after {
+        background: rgba(255, 255, 255, 0.7);
+    }
 }
