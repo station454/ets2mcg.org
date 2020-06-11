@@ -69,6 +69,47 @@ div.pagecontent.sectionid2 {
     }
 }
 
+.keyword-item {
+    display: none;
+}
+
+.typing {
+    color: white;
+    animation-duration: 1s;
+    animation-name: textCursor;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes textCursor {
+    13% {
+        opacity: 1;
+    }
+    37% {
+        opacity: 1;
+    }
+    63% {
+        opacity: 0;
+    }
+    87% {
+        opacity: 0;
+    }
+}
+
+div.teamtitle {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 7vh;
+    color: gold;
+    font-weight: 900;
+}
+
+div.teamtext {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3vh;
+    color: goldenrod;
+    font-weight: 100;
+}
+
 @media(max-width:1300px) {
     .languageflagtitle {
         font-size: 70;
@@ -89,6 +130,12 @@ div.pagecontent.sectionid2 {
         background-color: #bebebe;
     }
     .languageflagtitle {
+        color: black;
+    }
+    div.teamtitle {
+        color: black;
+    }
+    div.teamtext {
         color: black;
     }
 }
