@@ -17,7 +17,7 @@
 	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
 
-<body style="margin: 0; background-color: #000000;">
+<body>
 	<!-- HEADER -->
 	<div id="header" style="z-index: 50; width: 100%;">
 		<div style="width: 100%; position: relative; padding: 5vh 0;">
@@ -134,8 +134,7 @@
 			<li><a href="rules.html" class="member">VTC Rules</a></li>
 		</ul>
 	</div>
-	<div class="langchooser"
-		style="display: block; visibility: hidden; background-color: #bbbbbb; padding: 10px 0px;">
+	<div class="langChooser">
 		<div style="display: block; margin: 0 auto; text-align: center;">
 			<span class="languageflagtitle" style="color: black;">Language</span>
 			<div style="display: inline-block; font-family: sans-serif;">
@@ -147,7 +146,7 @@
 		</div>
 	</div>
 
-	<div style="width: 100%; background-color: #222222;">
+	<div class="post">
 		<div class="pagecontent">
 			<h1>About Us</h1>
 			<p>ETS2MCG(<i>ETS2 Multiplayer Convoys Group</i>) Team was established in 2016. We are an Asian Team with
@@ -171,7 +170,7 @@
 				<li>You can experience our team's unique fast driving!</li>
 			</ul>
 		</div>
-		<div class="pagecontent" style="background-color: #706400;">
+		<div class="pagecontent" style="background-color: #ffd700;">
 			<h2>Applying for ETS2MCG</h2>
 			<p>If you meet all of the requirements below, you may apply for ETS2MCG member.</p>
 			<ul>
@@ -197,7 +196,7 @@
 					href="mailto:kiengiangnt2000@gmail.com">here(kiengiangnt2000@gmail.com).</a>
 			</p>
 		</div>
-		<div class="pagecontent" style="background-color: #000000;">
+		<div class="pagecontent">
 			<h2>Let's stay connected.</h2>
 			<br>
 			<p>ETS2MCG team has Facebook group, YouTube channel, Steam group. We hope to see you there!</p>
@@ -226,7 +225,7 @@
 				<h3>ETS2MCG Team on Steam</h3>
 			</a>
 		</div>
-		<div class="pagecontent" style="background-color: #000000;">
+		<div class="pagecontent">
 			<br>
 			<p>ETS2MCG, We are family!</p>
 		</div>
@@ -235,11 +234,11 @@
 	<script>
 		initializeScrollWorker(".pagecontent");
 
-		twemoji.parse($(".langchooser")[0], {
+		twemoji.parse($(".langChooser")[0], {
 			size: "svg",
 			ext: ".svg"
 		});
-		$(".langchooser").css("visibility", "");
+		$(".langChooser").css("visibility", "visible");
 
 		$(".languageflagbutton").hover((obj) => {
 			$(".languageflagbutton").css("z-index", "5");
