@@ -99,14 +99,14 @@ div.pagecontent.sectionid2 {
 div.teamtitle {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 7vh;
-    color: gold;
+    color: black;
     font-weight: 900;
 }
 
 div.teamtext {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 3vh;
-    color: goldenrod;
+    color: black;
     font-weight: 100;
 }
 
@@ -133,9 +133,9 @@ div.teamtext {
         color: black;
     }
     div.teamtitle {
-        color: black;
+        color: gold;
     }
     div.teamtext {
-        color: black;
+        color: goldenrod;
     }
 }
