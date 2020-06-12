@@ -12,7 +12,7 @@ body {
 
 .post {
     width: 100%;
-    background-color: #ffffff;
+    background-color: #efefef;
 }
 
 div {
@@ -30,7 +30,7 @@ div.pagecontent {
     padding: 20px 50px 20px 50px;
     display: block;
     margin: 0 auto;
-    background-color: #efefef;
+    background-color: white;
     color: black;
     width: var(--pagewidth);
 }
@@ -368,10 +368,10 @@ img.emoji {
         color: gray;
     }
     .post {
-        background-color: black;
+        background-color: #282828;
     }
     div.pagecontent {
-        background-color: #282828;
+        background-color: black;
         color: white;
     }
     a.text {
