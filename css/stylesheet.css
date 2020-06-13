@@ -44,6 +44,10 @@ footer {
     padding: 20px;
 }
 
+footer>p {
+    text-indent: 0px;
+}
+
 .dotted::before {
     content: "|";
     color: black;
