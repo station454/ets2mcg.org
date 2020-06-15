@@ -49,7 +49,7 @@ function initializeScrollWorker(selector) {
 }
 
 function loadSlideshowSlides() {
-    var slideshowHome = "https://common.ets2mcg.com/img/slides/";
+    var slideshowHome = "https://common.ets2mcg.org/img/slides/";
     var slideshowList = "show.json";
     var slideshowElem = "#slideshow";
 
