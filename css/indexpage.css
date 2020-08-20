@@ -43,6 +43,8 @@ div.pagecontent.sectionid2 {
     display: inline-block;
     transition: transform .4s;
     position: relative;
+
+    filter: drop-shadow(-3px -3px 6px white) drop-shadow(3px 3px 6px black);
 }
 
 .languageflagbutton:hover {
@@ -109,6 +111,31 @@ div.teamtext {
     font-size: 3vh;
     color: black;
     font-weight: 100;
+}
+
+.snsButton {
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0px 5px 10px black;
+    border-radius: 7px;
+    border: 1px solid gray;
+    font-size: 30px;
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    margin: 5px 5px;
+
+    transition: transform 0.3s;
+    transition-timing-function: cubic-bezier(0, 0, 0, 1);
+}
+
+.snsButton:hover {
+    z-index: 20;
+    transform: scale(1.2);
+    transition: transform 0.4s;
+    transition-timing-function: cubic-bezier(0.13, 0.99, 0.33, 2.13);
 }
 
 @media(max-width:1300px) {

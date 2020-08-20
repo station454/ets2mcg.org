@@ -13,6 +13,7 @@ body {
 .post {
     width: 100%;
     background-color: #efefef;
+    overflow: auto;
 }
 
 div {
@@ -27,12 +28,17 @@ div.centertext {
 }
 
 div.pagecontent {
+    margin: 50px auto;
     padding: 20px 50px 20px 50px;
+    border-radius: 35px;
+
+    width: var(--pagewidth);
     display: block;
-    margin: 0 auto;
+
     background-color: white;
     color: black;
-    width: var(--pagewidth);
+
+    box-shadow: 0 15px 30px #000000;
 }
 
 footer {
@@ -74,25 +80,6 @@ a.text:visited {
 
 a.text:hover {
     color: #c100cf;
-}
-
-a.sns {
-    text-decoration: none;
-    cursor: pointer;
-    user-select: none;
-    color: white;
-}
-
-a.sns:link {
-    color: white;
-}
-
-a.sns:visited {
-    color: white;
-}
-
-a.sns:hover {
-    color: gold;
 }
 
 a.foot {
@@ -191,6 +178,8 @@ ul#menubar>li {
     color: black;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    transition: background-color 0.3s
 }
 
 ul#menubar>li.right {
