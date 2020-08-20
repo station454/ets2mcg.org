@@ -129,9 +129,6 @@ div.teamtext {
 
     transition: transform 0.3s;
     transition-timing-function: cubic-bezier(0, 0, 0, 1);
-
-    -webkit-transition: -webkit-transform 0.2s;
-    -webkit-transition-timing-function: ease-out
 }
 
 .snsButton:hover {
@@ -139,10 +136,6 @@ div.teamtext {
     transform: scale(1.2);
     transition: transform 0.4s;
     transition-timing-function: cubic-bezier(0.13, 0.99, 0.33, 2.13);
-
-    -webkit-transform: scale(1.2);
-    -webkit-transition: -webkit-transform 0.2s;
-    -webkit-transition-timing-function: ease-out
 }
 
 @media(max-width:1300px) {
