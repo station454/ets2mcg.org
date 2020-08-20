@@ -10,8 +10,7 @@
     <meta name="theme-color" content="#f7d331">
     <meta property="og:site_name" content="ETS2MCG" />
     <meta property="og:title" content="Rules | ETS2MCG" />
-    <meta property="og:description"
-        content="ETS2MCG Team was established in 2016. We are an Asian Team with many countries. We are family!" />
+    <meta property="og:description" content="ETS2MCG Team was established in 2016. We are an Asian Team with many countries. We are family!" />
     <meta property="og:image" content="https://common.ets2mcg.org/img/ETS2MCG.png" />
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/basehelper.js"></script>
@@ -21,16 +20,17 @@
 <body>
     <div class="menubarContainer">
         <ul id="menubar">
-            <li class="mcglogo"><a href="index.html" class="member"><img src="https://common.ets2mcg.org/img/ETS2MCG.png"><span
-                        class="mcglogotext">ETS2MCG</span></a></li>
+            <li class="mcglogo"><a href="index.html" class="member"><img src="https://common.ets2mcg.org/img/ETS2MCG.png"><span class="mcglogotext">ETS2MCG</span></a></li>
             <li><a href="privacy.html" class="member">Privacy Policy</a></li>
             <li class="current"><a href="rules.html" class="member">VTC Rules</a></li>
         </ul>
     </div>
 
     <div class="post">
-        <div class="pagecontent">
+        <div class="pagecontent" id="titlesection">
             <h1>ETS2MCG VTC Rules</h1>
+        </div>
+        <div class="pagecontent" id="vtcrulessection">
             <h2>VTC Rules</h2>
             <ol>
                 <li>Follow
@@ -48,6 +48,8 @@
                 <li>If you wish to leave the VTC, please talk and notify the General Manager or Human Resources first.
                     Leaving without stating any reason will be considered as VTC hopping and will result in a ban and blacklist.</li>
             </ol>
+        </div>
+        <div class="pagecontent" id="convoyrulessection">
             <h2>Convoy/Event Rules</h2>
             <ol>
                 <li>Follow
@@ -70,6 +72,33 @@
                 <li>Please follow Convoy Leader and Coonvoy Leader, don't overtake them.</li>
             </ol>
         </div>
+        <style>
+            #titlesection {
+                background-color: #ccc;
+            }
+
+            #vtcrulessection {
+                background-color: #fff1a3;
+            }
+
+            #convoyrulessection {
+                background-color: #ffa3a3;
+            }
+
+            @media(prefers-color-scheme: dark) {
+                #titlesection {
+                    background-color: #353535;
+                }
+
+                #vtcrulessection {
+                    background-color: #8a7500;
+                }
+
+                #convoyrulessection {
+                    background-color: #8a0000;
+                }
+            }
+        </style>
     </div>
 
     <footer>
