@@ -2,6 +2,10 @@
     --pagewidth: 1100px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     overflow-x: hidden;
     color: black;
@@ -33,6 +37,7 @@ div.pagecontent {
     border-radius: 35px;
 
     width: var(--pagewidth);
+    box-sizing: border-box;
     display: block;
 
     background-color: white;
@@ -42,12 +47,13 @@ div.pagecontent {
 }
 
 footer {
-    width: calc(100% - 40px);
+    width: 100vw;
     border: solid #aaaaaa;
     border-width: 1px 0 0 0;
     background-color: #dfdfdf;
     text-align: center;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 footer>p {
@@ -164,7 +170,7 @@ ul#menubar {
     list-style-type: none;
     overflow: hidden;
     background-color: #fff45c;
-    width: calc(var(--pagewidth) + 100px);
+    width: var(--pagewidth);
     padding: 0px;
     display: block;
     margin: 0 auto;
@@ -289,7 +295,17 @@ img.emoji {
         font-size: 40;
     }
     div.pagecontent {
+        margin: 50px auto;
+        padding: 20px 50px 20px 50px;
+        border-radius: 35px;
+    
         width: calc(var(--pagewidth) - 100px);
+        display: block;
+    
+        background-color: white;
+        color: black;
+    
+        box-shadow: 0 15px 30px #000000;
     }
     h1 {
         font-size: 80 !important;
