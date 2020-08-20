@@ -190,21 +190,40 @@
 			</p>
 			<style>
 				#applyButton {
-					box-shadow: -8px -8px 16px #ffe44d, 8px 8px 16px #8d7800;
-					background-color: #ffdc13;
+					--button-color-a: #ffd700;
+					--neumorph-color-a: #ffff00;
+					--neumorph-color-b: #8f7800;
+
+					box-shadow: -8px -8px 16px var(--neumorph-color-a), 8px 8px 16px var(--neumorph-color-b);
+					background-color: var(--button-color-a);
 
 					border: none;
 					border-radius: 16px;
+
+					transition: box-shadow 0.3s, transform 0.3s;
 				}
-				
+
 				#applyButton:hover {
 					transform: scale(1.03);
+					box-shadow: -10px -10px 20px var(--neumorph-color-a), 10px 10px 20px var(--neumorph-color-b);
+				}
+
+				#applyButton:active {
+					--button-color-a: #fc7703;
+					--neumorph-color-a: #8d4302;
+					--neumorph-color-b: #ffab04;
+
+					transform: scale(1.07);
+					box-shadow: inset -6px -6px 12px var(--neumorph-color-b), inset 6px 6px 12px var(--neumorph-color-a);
+
+					transition: transform 0.2s, background-color 0.3s;
 				}
 
 				@media(prefers-color-scheme: dark) {
 					#applyButton {
-						box-shadow: -8px -8px 16px #ffd900, 8px 8px 16px #383000;
-						background-color: #c2a500;
+						--button-color-a: #a38b00;
+						--neumorph-color-a: #ebc800;
+						--neumorph-color-b: #5b4e00;
 					}
 				}
 			</style>
