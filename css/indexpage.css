@@ -47,6 +47,7 @@ div.pagecontent.sectionid2 {
 
 .languageflagbutton:hover {
     transform: scale(1.5);
+    z-index: 500;
 }
 
 .languageflagbutton_loading {

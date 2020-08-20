@@ -243,11 +243,6 @@
 		});
 		$(".langChooser").css("visibility", "visible");
 
-		$(".languageflagbutton").hover((obj) => {
-			$(".languageflagbutton").css("z-index", "5");
-			$(obj.currentTarget).css("z-index", "50");
-		})
-
 		$(".languageflagbutton").each((i, elem) => {
 			$(elem).addClass("languageflagbutton_loading");
 			$(elem).css("animation-delay", i * 150 + "ms");
