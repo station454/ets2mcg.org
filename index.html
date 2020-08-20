@@ -188,7 +188,27 @@
 			</ul>
 			<p>To apply for our team, you can submit the form by clicking the button below.</a>
 			</p>
-			<a target="_blank" class="snsButton" style="background-color: black; width: 90%; margin: 0 auto; display: block;" href="https://apply.ets2mcg.org">Apply to ETS2MCG Team!</a>
+			<style>
+				#applyButton {
+					box-shadow: -8px -8px 16px #ffe44d, 8px 8px 16px #8d7800;
+					background-color: #ffdc13;
+
+					border: none;
+					border-radius: 16px;
+				}
+				
+				#applyButton:hover {
+					transform: scale(1.03);
+				}
+
+				@media(prefers-color-scheme: dark) {
+					#applyButton {
+						box-shadow: -8px -8px 16px #ffd900, 8px 8px 16px #383000;
+						background-color: #c2a500;
+					}
+				}
+			</style>
+			<a target="_blank" class="snsButton" style="width: 90%; margin: 0 auto; display: block;" id="applyButton" href="https://apply.ets2mcg.org">Apply to ETS2MCG Team!</a>
 			<p>You can also join our Discord server <a class="text" target="_blank" href="https://discord.gg/vez83th">here</a>.
 				Feel free to ask if you have any questions! And you can contact us via email by clicking <a class="text" target="_blank" href="mailto:kiengiangnt2000@gmail.com">here too.</a>
 			</p>
@@ -197,10 +217,11 @@
 			div#snsFrame {
 				background-color: #9c9c9c;
 			}
+
 			@media(prefers-color-scheme: dark) {
 				div#snsFrame {
 					background-color: #404040;
-			}
+				}
 			}
 		</style>
 		<div class="pagecontent">
