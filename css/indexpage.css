@@ -43,6 +43,7 @@ div.pagecontent.sectionid2 {
     display: inline-block;
     transition: transform .4s;
     position: relative;
+    overflow-x: hidden;
 
     filter: drop-shadow(-3px -3px 6px white) drop-shadow(3px 3px 6px black);
 }
