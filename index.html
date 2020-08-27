@@ -200,8 +200,6 @@
 				return window.scrollY > 0;
 			}
 			let resized = (firstTime = false, forceUpdate = false) => {
-				// slideshow.css("--full-height", window.innerHeight + "px");
-				
 				let rect = post[0].getBoundingClientRect();
 				if (last === null) {
 					last = !isDownPosition();
