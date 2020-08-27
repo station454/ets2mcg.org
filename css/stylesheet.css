@@ -145,6 +145,7 @@ p {
     left: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.4);
+    transition: background 0.5s ease;
 }
 
 img {
@@ -402,7 +403,10 @@ img.emoji {
     ul#menubar>li.current {
         background-color: #ffce5c;
     }
-    #slideshow::after {
-        background: rgba(0, 0, 0, 0.7);
+    #slideshow.nonfullscr::after {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    #slideshow.fullscr::after {
+        background: rgba(0, 0, 0, 0.4);
     }
 }

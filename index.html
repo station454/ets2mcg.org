@@ -206,12 +206,16 @@
 				if (last != isDownPosition()) {
 					last = isDownPosition();
 					if (last) {
+						slideshow.addClass("fullscr");
+						slideshow.removeClass("nonfullscr");
 						slideshow.css("transition", "height 1s");
 						slideshow.height("");
-						post.css("background-color", "rgba(0, 0, 0, 0.5)")
+						post.css("background-color", "rgba(0, 0, 0, 0)")
 						post.css("transition", "background-color 2s ease-out");
 						post.css("transition-delay", "300ms");
 					} else {
+						slideshow.addClass("nonfullscr");
+						slideshow.removeClass("fullscr");
 						if (firstTime) {
 							slideshow.css("transition", "none");
 							slideshow.css("transition-delay", "0s");
