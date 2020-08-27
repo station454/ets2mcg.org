@@ -198,12 +198,12 @@
 				//return post[0].getBoundingClientRect().top < 0;
 				return window.scrollY > 0;
 			}
-			let resized = (firstTime = false) => {
+			let resized = (firstTime = false, forceUpdate = false) => {
 				let rect = post[0].getBoundingClientRect();
 				if (last === null) {
 					last = !isDownPosition();
 				}
-				if (last != isDownPosition()) {
+				if (last != isDownPosition() || forceUpdate) {
 					last = isDownPosition();
 					if (last) {
 						slideshow.addClass("fullscr");
@@ -231,7 +231,7 @@
 				}
 			};
 			window.onresize = () => {
-				resized(false);
+				resized(false, true);
 			};
 			resized(true);
 
