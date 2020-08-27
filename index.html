@@ -195,7 +195,8 @@
 			let last = null;
 
 			let isDownPosition = () => {
-				return post[0].getBoundingClientRect().top < 0;
+				//return post[0].getBoundingClientRect().top < 0;
+				return window.scrollY > 0;
 			}
 			let resized = (firstTime = false) => {
 				let rect = post[0].getBoundingClientRect();
@@ -205,7 +206,7 @@
 				if (last != isDownPosition()) {
 					last = isDownPosition();
 					if (last) {
-						slideshow.css("transision", "");
+						slideshow.css("transition", "height 1s");
 						slideshow.height("");
 						post.css("background-color", "rgba(0, 0, 0, 0.5)")
 						post.css("transition", "background-color 2s ease-out");
@@ -228,7 +229,7 @@
 				//slideshow.css("top", $("#header").position().top)
 			};
 			window.onresize = () => {
-				resized();
+				resized(true);
 			};
 			resized(true);
 

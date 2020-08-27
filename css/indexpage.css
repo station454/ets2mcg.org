@@ -9,10 +9,22 @@
     display: block;
 
     transition: height 0.1s ease-in-out;
+    overflow: hidden;
 }
 
 #slideshow.reading {
     height: 50%;
+}
+
+img.imgSlide {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: block;
+    overflow: hidden;
 }
 
 div.pagecontent.sectionid1 {
