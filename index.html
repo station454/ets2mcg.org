@@ -42,93 +42,8 @@
 		</div>
 	</div>
 	<!-- The slides will be loaded by script dynamically -->
-	<div id="slideshow" style="position: absolute; background-color: black; z-index: -10; display: block; width: 100%;">
+	<div id="slideshow">
 	</div>
-
-	<script>
-		let resized = () => {
-			let slideshow = $("#slideshow");
-
-			slideshow.height($("#header").height());
-			slideshow.css("top", $("#header").position().top)
-		};
-		window.onresize = resized;
-		resized();
-
-		{
-			var x = document.getElementsByClassName("imgSlide");
-			for (i = 0; i < x.length; i++) {
-				let jq = $(x[i]);
-				jq.hide();
-			}
-		}
-
-		var slideIndex = 0;
-		var first = true;
-		loadSlideshowSlides();
-		carousel();
-		function carousel() {
-
-			if (!document.hidden) {
-				var i;
-				var x = document.getElementsByClassName("imgSlide");
-				for (i = 0; i < x.length; i++) {
-					let jq = $(x[i]);
-					if (!first) {
-						jq.addClass("backFadingOut")
-					}
-				}
-				if (slideIndex === x.length) { slideIndex = 0 }
-
-				let prev = slideIndex - 1;
-				if (prev < 0) prev = x.length - 1;
-
-				$(x[prev]).addClass("backFadingOut");
-				$(x[prev]).removeClass("backFadingIn");
-
-				$(x[slideIndex]).show();
-				$(x[slideIndex]).removeClass("backFadingOut");
-				$(x[slideIndex]).addClass("backFadingIn");
-
-				slideIndex++;
-				if (first) first = false;
-			}
-
-			setTimeout(carousel, 7000); // Change image every 2 seconds
-		}
-	</script>
-
-	<script>
-		let currentKeywordIndex = 0;
-		function keywordTick() {
-			let c = document.getElementsByClassName("keyword-item");
-			let a = $(c[currentKeywordIndex]);
-			let b = $("#keyword")
-
-			let text = a.text();
-			let curText = b.text();
-			let done = false;
-
-			if (!text.startsWith(curText)) {
-				curText = curText.substring(0, curText.length - 1);
-			} else if (text !== curText) {
-				curText += text.substring(curText.length).charAt(0);
-			} else if (text === curText) {
-				done = true;
-			}
-
-			b.text(curText);
-
-			if (done) {
-				currentKeywordIndex++;
-				if (currentKeywordIndex === c.length) currentKeywordIndex = 0;
-				setTimeout(keywordTick, Number(a.attr("delay")));
-			} else {
-				setTimeout(keywordTick, 50);
-			}
-		}
-		keywordTick()
-	</script>
 
 	<div class="menubarContainer">
 		<ul id="menubar">
@@ -273,7 +188,129 @@
 	</div>
 
 	<script>
-		// initializeScrollWorker(".pagecontent");
+		// Slideshow
+		function resizeSlideshow() {
+			let slideshow = $("#slideshow");
+			let post = $(".post");
+			let last = null;
+
+			let isDownPosition = () => {
+				return post[0].getBoundingClientRect().top < 0;
+			}
+			let resized = (firstTime = false) => {
+				let rect = post[0].getBoundingClientRect();
+				if (last === null) {
+					last = !isDownPosition();
+				}
+				if (last != isDownPosition()) {
+					last = isDownPosition();
+					if (last) {
+						slideshow.css("transision", "");
+						slideshow.height("");
+						post.css("background-color", "rgba(0, 0, 0, 0.5)")
+						post.css("transition", "background-color 2s ease-out");
+						post.css("transition-delay", "300ms");
+					} else {
+						if (firstTime) {
+							slideshow.css("transition", "none");
+							slideshow.css("transition-delay", "0s");
+						} else {
+							slideshow.css("transition", "height 1s");
+							slideshow.css("transition-delay", "0s");
+						}
+						slideshow.height($("#header").height());
+						post.css("background-color", "")
+						post.css("transition", "background-color 0.2s ease-in-out");
+						post.css("transition-delay", "");
+					}
+				}
+
+				//slideshow.css("top", $("#header").position().top)
+			};
+			window.onresize = () => {
+				resized();
+			};
+			resized(true);
+
+			$(document).on("scroll", () => {
+				resized();
+			});
+		}
+		resizeSlideshow();
+
+		{
+			var x = document.getElementsByClassName("imgSlide");
+			for (i = 0; i < x.length; i++) {
+				let jq = $(x[i]);
+				jq.hide();
+			}
+		}
+
+		var slideIndex = 0;
+		var first = true;
+		loadSlideshowSlides();
+		carousel();
+		function carousel() {
+
+			if (!document.hidden) {
+				var i;
+				var x = document.getElementsByClassName("imgSlide");
+				for (i = 0; i < x.length; i++) {
+					let jq = $(x[i]);
+					if (!first) {
+						jq.addClass("backFadingOut")
+					}
+				}
+				if (slideIndex === x.length) { slideIndex = 0 }
+
+				let prev = slideIndex - 1;
+				if (prev < 0) prev = x.length - 1;
+
+				$(x[prev]).addClass("backFadingOut");
+				$(x[prev]).removeClass("backFadingIn");
+
+				$(x[slideIndex]).show();
+				$(x[slideIndex]).removeClass("backFadingOut");
+				$(x[slideIndex]).addClass("backFadingIn");
+
+				slideIndex++;
+				if (first) first = false;
+			}
+
+			setTimeout(carousel, 7000); // Change image every 2 seconds
+		}
+
+		// Word switcher
+
+		let currentKeywordIndex = 0;
+		function keywordTick() {
+			let c = document.getElementsByClassName("keyword-item");
+			let a = $(c[currentKeywordIndex]);
+			let b = $("#keyword")
+
+			let text = a.text();
+			let curText = b.text();
+			let done = false;
+
+			if (!text.startsWith(curText)) {
+				curText = curText.substring(0, curText.length - 1);
+			} else if (text !== curText) {
+				curText += text.substring(curText.length).charAt(0);
+			} else if (text === curText) {
+				done = true;
+			}
+
+			b.text(curText);
+
+			if (done) {
+				currentKeywordIndex++;
+				if (currentKeywordIndex === c.length) currentKeywordIndex = 0;
+				setTimeout(keywordTick, Number(a.attr("delay")));
+			} else {
+				setTimeout(keywordTick, 50);
+			}
+		}
+		keywordTick()
 
 		twemoji.parse($(".langChooser")[0], {
 			size: "svg",
