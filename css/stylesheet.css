@@ -300,6 +300,20 @@ img.emoji {
     
         box-shadow: 0 15px 30px #000000;
     }
+    div.pagecontent {
+        margin: 0;
+        padding: 20px 50px 20px 50px;
+        border-radius: 0;
+    
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+    
+        background-color: white;
+        color: black;
+    
+        box-shadow: none;
+    }
     h1 {
         font-size: 80 !important;
     }
@@ -403,10 +417,7 @@ img.emoji {
     ul#menubar>li.current {
         background-color: #ffce5c;
     }
-    #slideshow.nonfullscr::after {
-        background: rgba(0, 0, 0, 0.5);
-    }
-    #slideshow.fullscr::after {
+    #slideshow::after {
         background: rgba(0, 0, 0, 0.4);
     }
 }
