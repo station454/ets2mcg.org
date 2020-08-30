@@ -288,19 +288,6 @@ img.emoji {
         font-size: 40;
     }
     div.pagecontent {
-        margin: 50px auto;
-        padding: 20px 50px 20px 50px;
-        border-radius: 35px;
-    
-        width: calc(var(--pagewidth) - 100px);
-        display: block;
-    
-        background-color: white;
-        color: black;
-    
-        box-shadow: 0 15px 30px #000000;
-    }
-    div.pagecontent {
         margin: 0;
         padding: 20px 50px 20px 50px;
         border-radius: 0;
@@ -327,8 +314,8 @@ img.emoji {
         text-indent: 35px;
     }
     ul#menubar {
-        width: 90%;
-        padding: 0 5%;
+        width: 100%;
+        padding: none;
     }
     ul#menubar>li {
         font-size: 50;
