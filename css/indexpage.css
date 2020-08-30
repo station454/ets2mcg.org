@@ -75,8 +75,8 @@ div.pagecontent.sectionid2 {
     display: inline-block;
     transition: transform .4s;
     position: relative;
-
-    filter: drop-shadow(-3px -3px 6px white) drop-shadow(3px 3px 6px black);
+/* 
+    filter: drop-shadow(-3px -3px 6px white) drop-shadow(3px 3px 6px black); */
 }
 
 .languageflagbutton:hover {
