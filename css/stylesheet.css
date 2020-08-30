@@ -168,7 +168,6 @@ ul#menubar {
 }
 
 ul#menubar>li {
-    padding: 14 16;
     box-sizing: inherit;
     float: left;
     width: auto;
@@ -176,7 +175,8 @@ ul#menubar>li {
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-    transition: background-color 0.3s
+    transition: background-color 0.3s;
+    position: relative;
 }
 
 ul#menubar>li.right {
@@ -192,8 +192,11 @@ ul#menubar>li.current {
 }
 
 .member {
+    display: block;
     text-decoration: none;
     line-height: 1;
+    width: 100%;
+    padding: 15px;
 }
 
 .mcglogo {
