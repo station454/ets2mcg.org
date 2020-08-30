@@ -374,11 +374,12 @@ img.emoji {
         color: gray;
     }
     .post {
-        background-color: #282828;
+        background-color: #454545;
     }
     div.pagecontent {
         background-color: black;
         color: white;
+        box-shadow: 0 10px 20px #000000;
     }
     a.text {
         color: #ffae00;
@@ -393,10 +394,10 @@ img.emoji {
         color: #00cf1c;
     }
     .menubarContainer {
-        background-color: #505050;
+        background-color: #404040;
     }
     ul#menubar {
-        background-color: #505050;
+        background-color: transparent;
     }
     ul#menubar>li {
         color: white;
