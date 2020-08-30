@@ -199,22 +199,13 @@ ul#menubar>li.current {
     padding: 15px;
 }
 
-.mcglogo {
-    width: 10em !important;
-}
-
-span.mcglogotext {
-    position: relative;
-    left: 3.5em;
-}
-
 .mcglogo>a>img {
-    width: 2rem;
+    /* width: 1em; */
+    height: 0.8em;
     padding: 0;
-    margin: 0 10;
-    position: absolute;
-    top: 0.7rem;
-    transform: scale(1.5);
+    margin: 0 25 0 10;
+    transform: scale(2.4);
+    position: relative;
 }
 
 div.fullscreen {
@@ -329,21 +320,18 @@ img.emoji {
         box-sizing: border-box;
         float: left;
     }
-    .mcglogo {
-        width: 90% !important;
-    }
-    span.mcglogotext {
-        position: unset;
-        left: unset;
-        margin: 0px 0px 0px 15px;
-    }
     .mcglogo>a>img {
         width: 1em;
-        padding: unset;
-        margin: unset;
-        position: unset;
-        top: unset;
-        transform: unset;
+        height: 1em;
+        transform: scale(1.2);
+        margin: 0 10;
+        overflow-y: hidden;
+        position: absolute;
+    }
+    span.mcglogotext {
+        position: relative;
+        left: 1.5em;
+        margin: 0px 0px 0px 15px;
     }
     #header {
         height: 65vh;
