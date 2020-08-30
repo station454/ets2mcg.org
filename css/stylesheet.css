@@ -9,14 +9,14 @@
 body {
     overflow-x: hidden;
     color: black;
-    background-color: #dfdfdf;
+    background-color: #e8e8e8;
     font-size: 20;
     margin: 0;
 }
 
 .post {
     width: 100%;
-    background-color: #efefef;
+    background-color: #d1d1d1;
     overflow: auto;
 }
 

@@ -1,3 +1,7 @@
+* {
+    --indexpage-snsframe-back: #e0e0e0;
+    --indexpage-snsbutton-hover: rgb(0, 0, 0);
+}
 #slideshow {
     position: fixed;
     top: 0;
@@ -27,11 +31,11 @@ img.imgSlide {
 }
 
 div.pagecontent.sectionid1 {
-    background-color: #ffd700;
+    background-color: #ede6a8;
 }
 
 div.pagecontent.sectionid2 {
-    background-color: #00ecf0;
+    background-color: #a8ebed;
 }
 
 .langChooser {
@@ -145,9 +149,7 @@ div.teamtext {
     color: white;
     width: calc(50% - 13px);
     height: fit-content;
-    box-shadow: 5px 5px 10px #7a7a7a, -5px -5px 10px #c2c2c2;
-    border-radius: 7px;
-    border: 1px solid #9c9c9c;
+    border-radius: 10px;
     font-size: 30px;
     padding: 5px;
     text-decoration: none;
@@ -157,15 +159,24 @@ div.teamtext {
 
     text-align: center;
 
-    transition: transform 0.3s;
+    transition: all 0.3s;
     transition-timing-function: cubic-bezier(0, 0, 0, 1);
+
+    cursor: none;
 }
 
 .snsButton:hover {
     z-index: 20;
-    transform: scale(1.1);
-    transition: transform 0.4s;
-    transition-timing-function: cubic-bezier(0.13, 0.99, 0.33, 1.85);
+    transition: all 0.15s ease-out;
+    box-shadow: 0 0 30px var(--indexpage-snsbutton-hover);
+}
+
+div#snsFrame {
+    background-color: var(--indexpage-snsframe-back);
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 15px;
+    display: block;
 }
 
 @media(max-width:1300px) {
@@ -178,6 +189,10 @@ div.teamtext {
 }
 
 @media(prefers-color-scheme: dark) {
+    * {
+        --indexpage-snsframe-back: rgb(71, 71, 71);
+        --indexpage-snsbutton-hover: rgb(201, 201, 201);
+    }
     div.pagecontent.sectionid1 {
         background-color: #a38b00;
     }
@@ -195,10 +210,5 @@ div.teamtext {
     }
     div.teamtext {
         color: goldenrod;
-    }
-
-    .snsButton {
-        box-shadow: 5px 5px 10px #222, -5px -5px 10px #666666;
-        border: 1px solid #404040;
     }
 }
