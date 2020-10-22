@@ -161,8 +161,6 @@ div.teamtext {
 
     transition: all 0.3s;
     transition-timing-function: cubic-bezier(0, 0, 0, 1);
-
-    cursor: none;
 }
 
 .snsButton:hover {
