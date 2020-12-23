@@ -1,5 +1,5 @@
 function loadSlideshowSlides() {
-    var slideshowHome = "https://common.ets2mcg.org/img/slides/";
+    var slideshowHome = "../common/img/slides/";
     var slideshowList = "show.json";
     var slideshowElem = "#slideshow";
 
