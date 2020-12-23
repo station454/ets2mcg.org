@@ -140,19 +140,6 @@ p {
     text-indent: 15px;
 }
 
-#slideshow::after {
-    content: " ";
-    z-index: 10;
-    display: block;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.4);
-    transition: background 0.5s ease;
-}
-
 img {
     user-select: none;
 }
@@ -392,22 +379,20 @@ img.emoji {
     a.text:hover {
         color: #00cf1c;
     }
-    .menubarContainer {
-        background-color: #404040;
-    }
+    
     ul#menubar {
-        background-color: transparent;
+        background-color: rgba(0, 0, 0, 0.4);
     }
-    ul#menubar>li {
+    
+    ul#menubar li {
         color: white;
     }
-    ul#menubar>li:hover {
+    
+    ul#menubar li:hover {
         background-color: #ffd700;
     }
-    ul#menubar>li.current {
+    
+    ul#menubar li.current {
         background-color: #ffce5c;
-    }
-    #slideshow::after {
-        background: rgba(0, 0, 0, 0.4);
     }
 }
