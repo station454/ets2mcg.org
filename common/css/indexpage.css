@@ -3,7 +3,7 @@
     --indexpage-snsbutton-hover: rgb(0, 0, 0);
 }
 #slideshow {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -131,11 +131,26 @@ div.pagecontent.sectionid2 {
     }
 }
 
+#slideshowMcgLogo {
+    height: 20vh;
+    margin: 0 auto;
+    padding: 0 5vw;
+    display: block;
+    float: left;
+}
+
+#teamTitleAndText {
+    width: 100%;
+    text-align: left;
+    margin-top: 3vh;
+}
+
 div.teamtitle {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 7vh;
     color: black;
     font-weight: 900;
+    user-select: none;
 }
 
 div.teamtext {
@@ -143,6 +158,7 @@ div.teamtext {
     font-size: 3vh;
     color: black;
     font-weight: 100;
+    user-select: none;
 }
 
 .snsButton {
@@ -177,12 +193,33 @@ div#snsFrame {
     display: block;
 }
 
+#header {
+    height: 38vh;
+}
+
 @media(max-width:1300px) {
     .languageflagtitle {
         font-size: 70;
     }
     .languageflagbutton {
         font-size: 70;
+    }
+
+    #teamTitleAndText {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    #slideshowMcgLogo {
+        height: 13vh;
+        margin: 0 auto;
+        padding: 0 5vw;
+        display: block;
+        float: unset;
+    }
+
+    #header {
+        height: fit-content;
     }
 }
 

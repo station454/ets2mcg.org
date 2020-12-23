@@ -24,7 +24,7 @@
                 }
             });
 
-            let targetUrl = `${selectedLanguage}/`;
+            let targetUrl = `${selectedLanguage}/index.html?autoRedirect=${selectedLanguage}`;
             location.replace(targetUrl);
             document.getElementById("targetUrl").setAttribute("href", targetUrl);
         </script>

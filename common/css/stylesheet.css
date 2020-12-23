@@ -16,7 +16,7 @@ body {
 
 .post {
     width: 100%;
-    background-color: #d1d1d1;
+    background-color: #ffffff;
     overflow: auto;
 }
 
@@ -32,18 +32,23 @@ div.centertext {
 }
 
 div.pagecontent {
-    margin: 30px auto 50px auto;
-    padding: 20px 50px 20px 50px;
-    border-radius: 35px;
+    margin: 0 auto 0 auto;
 
-    width: var(--pagewidth);
+    width: 100%;
+    padding: 30px calc((100% - var(--pagewidth)) / 2) 30px calc((100% - var(--pagewidth)) / 2);
     box-sizing: border-box;
     display: block;
 
     background-color: white;
     color: black;
+}
 
-    box-shadow: 0 15px 30px #000000;
+div.pagecontent.left {
+    padding: 30px calc(100% - var(--pagewidth) - 5%) 30px 5%;
+}
+
+div.pagecontent.center {
+    padding: 30px calc((100% - var(--pagewidth)) / 2) 30px calc((100% - var(--pagewidth)) / 2);
 }
 
 footer {
@@ -154,58 +159,68 @@ img {
 
 .menubarContainer {
     width: 100%;
-    background-color: #fff45c;
+    background-color: transparent;
 }
 
 ul#menubar {
     list-style-type: none;
     overflow: hidden;
-    background-color: #fff45c;
-    width: var(--pagewidth);
-    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: fit-content;
+    padding: 20px;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 0 0;
+    border-radius: 0 0 20px 0;
 }
 
-ul#menubar>li {
+ul#menubar li {
     box-sizing: inherit;
     float: left;
     width: auto;
-    color: black;
+    color: white;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     position: relative;
 }
 
-ul#menubar>li.right {
-    float: right;
-}
-
-ul#menubar>li:hover {
-    background-color: #ffd700;
-}
-
-ul#menubar>li.current {
-    background-color: #ffce5c;
-}
-
-.member {
+ul#menubar li>span {
     display: block;
     text-decoration: none;
     line-height: 1;
-    width: 100%;
-    padding: 15px;
+    width: fit-content;
+    padding: 15px 15px 15px 7px;
 }
 
-.mcglogo>a>img {
-    /* width: 1em; */
-    height: 0.8em;
+ul#menubar li:hover {
+    background-color: #fff2aa;
+    color: black;
+}
+
+ul#menubar li.current {
+    background-color: #c7ffb6;
+    color: black;
+}
+
+.mcglogo {
+    height: 50px;
+    width: fit-content;
+}
+
+.mcglogo * {
+    float: right;
+    margin: auto;
+    padding-left: 5px;
+}
+
+.mcglogo img {
+    width: 40px;
+    height: 40px;
     padding: 0;
-    margin: 0 25 0 10;
-    transform: scale(2.4);
+    margin: 5px;
     position: relative;
+    float: left;
 }
 
 div.fullscreen {
@@ -263,10 +278,6 @@ div.fullscreen {
     }
 }
 
-#header {
-    height: 50vh;
-}
-
 img.emoji {
     height: 1em;
     width: 1em;
@@ -307,35 +318,35 @@ img.emoji {
     p {
         text-indent: 35px;
     }
+    
     ul#menubar {
+        list-style-type: none;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.4);
         width: 100%;
-        padding: none;
-    }
-    ul#menubar>li {
-        font-size: 50;
-        padding: 14 16;
-        position: relative;
+        padding: 20px;
         display: block;
+        margin: 0 auto 0 0;
+        border-radius: 0;
+    }
+    
+    ul#menubar li {
         width: 100%;
-        box-sizing: border-box;
+    }
+
+    ul#menubar li.mcglogo > span {
+        padding: 15px 15px 15px 3px;
+    }
+    
+    .mcglogo {
+        height: 50px;
+        width: fit-content;
+    }
+    
+    .mcglogo > span {
         float: left;
     }
-    .mcglogo>a>img {
-        width: 1em;
-        height: 1em;
-        transform: scale(1.2);
-        margin: 0 10;
-        overflow-y: hidden;
-        position: absolute;
-    }
-    span.mcglogotext {
-        position: relative;
-        left: 1.5em;
-        margin: 0px 0px 0px 15px;
-    }
-    #header {
-        height: 65vh;
-    }
+
 }
 
 @media(prefers-color-scheme: dark) {

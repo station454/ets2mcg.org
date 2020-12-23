@@ -8,26 +8,43 @@
 	<link rel="stylesheet" href="../common/css/fonts.css?a">
 	<link rel="stylesheet" href="../common/css/indexpage.css?abcdefasdfgasdffsadfgehf">
 	<link rel="stylesheet" href="../common/css/stylesheet.css?nocachefbbghdshgvddfgsdgfhdfg">
-	<link rel="icon" href="../common/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="https://common.ets2mcg.org/img/favicon.ico" type="image/x-icon">
 	<meta name="theme-color" content="#f7d331">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta property="og:site_name" content="ETS2MCG" />
 	<meta property="og:title" content="Home | ETS2MCG" />
-	<meta property="og:description" content="ETS2MCG Team was established in 2016. We are an Asian Team with many countries. We are family!" />
-	<meta property="og:image" content="../common/img/ETS2MCG.png" />
+	<meta property="og:description"
+		content="ETS2MCG Team was established in 2016. We are an Asian Team with many countries. We are family!" />
+	<meta property="og:image" content="https://common.ets2mcg.org/img/ETS2MCG.png" />
 	<script src="../common/js/jquery-3.5.1.min.js"></script>
 	<script src="../common/js/basehelper.js"></script>
 	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+	<!-- TRANSLATORS SHOULD NEVER TRANSLATE SENTENCES WITHIN langWarning -->
+	<div id="langWarning" style="background-color: rgb(36, 36, 36); color: white; text-align: left; padding: 30px; display: none;">
+		<span style="color: inherit; font-size: 30px; display: block; margin: 10px;">This page has been translated into your preferred language</span>
+		<span style="color: inherit; font-size: 20px; display: block; margin: 10px;">If you find anything wrong, please take a look at the English page <a style="color: rgb(166, 255, 139); text-decoration: none;" href="../en_us/">here</a>.</span>
+	</div>
 	<!-- HEADER -->
 	<div id="header" style="z-index: 50; width: 100%;">
-		<div style="width: 100%; position: relative; padding: 5vh 0;">
-			<div style="width: 100%;">
-				<img src="../common/img/ETS2MCG.png" style="height: 20vh; margin: 0 auto; padding: 0 5vw; display: block;">
-			</div>
-			<div style="width: 100%; text-align: center; margin-top: 3vh;">
+		<div class="menubarContainer">
+			<ul id="menubar">
+				<a href="index.html">
+					<li class="mcglogo"><img src="https://common.ets2mcg.org/img/ETS2MCG.png"><span>ETS2MCG</span></li>
+				</a>
+				<a href="privacy.html">
+					<li><span>Privacy Policy</span></li>
+				</a>
+				<a href="rules.html">
+					<li><span>VTC Rules</span></li>
+				</a>
+			</ul>
+		</div>
+		<div style="width: 100%; position: relative; padding: 3vh 0;">
+			<img src="https://common.ets2mcg.org/img/ETS2MCG.png" id="slideshowMcgLogo">
+			<div id="teamTitleAndText">
 				<div class="teamtitle centertext">
 					ETS2MCG
 				</div>
@@ -43,29 +60,20 @@
 		</div>
 	</div>
 	<!-- The slides will be loaded by script dynamically -->
-	<div style="position: absolute; top: 0; overflow: hidden; width: 100%; height: 100%; clip: rect(0, auto, auto, 0);">
-		<div id="slideshow">
-		</div>
-	</div>
+	<div id="slideshow"></div>
 
-	<div class="menubarContainer">
-		<ul id="menubar">
-			<li><a href="privacy.html" class="member">Privacy Policy</a></li>
-			<li><a href="rules.html" class="member">VTC Rules</a></li>
-		</ul>
-	</div>
 	<div class="langChooser" style="width: 100%; overflow: hidden;">
 		<div style="display: block; margin: 0 auto; text-align: center;">
 			<span class="languageflagtitle" style="color: black;">Language</span>
 			<div style="display: inline-block; font-family: sans-serif;">
-				<a class="languageflagbutton" href="https://www.ets2mcg.org/en_us/" title="English">🇬🇧</a>
-				<a class="languageflagbutton" href="https://www.ets2mcg.org/ko_kr/" title="Korean">🇰🇷</a>
+				<a class="languageflagbutton" href="../en_us/index.html" title="English">🇬🇧</a>
+				<a class="languageflagbutton" href="../ko_kr/index.html" title="Korean">🇰🇷</a>
 			</div>
 		</div>
 	</div>
 
 	<div class="post">
-		<div class="pagecontent">
+		<div class="pagecontent left">
 			<h1>About Us</h1>
 			<p>ETS2MCG(<i>ETS2 Multiplayer Convoys Group</i>) Team was established in 2016. We are an Asian Team with
 				many countries: Vietnam, Thailand, Korea, Japan, Indonesia, Malaysia, China.</p>
@@ -78,17 +86,19 @@
 			</ul>
 			<i>ETS2MCG is not only a simple team but also a big family for all drivers.</i>
 		</div>
-		<div class="pagecontent sectionid2">
-			<h2>Why should you choose ETS2MCG?</h2>
-			<p>Joining ETS2MCG team, you will have a plenty amount of benefits.</p>
-			<ul>
-				<li>You can apply for a DLC gift event.</li>
-				<li>You can quickly check and participate in events within and outside our team.</li>
-				<li>You can play games with your team members and build friendships.</li>
-				<li>You can experience our team's unique fast driving!</li>
-			</ul>
+		<div class="pagecontent sectionid2 center">
+			<div style="width: fit-content; margin: 0 auto;">
+				<h2>Why should you choose ETS2MCG?</h2>
+				<p>Joining ETS2MCG team, you will have a plenty amount of benefits.</p>
+				<ol>
+					<li>You can apply for a DLC gift event.</li>
+					<li>You can quickly check and participate in events within and outside our team.</li>
+					<li>You can play games with your team members and build friendships.</li>
+					<li>You can experience our team's unique fast driving!</li>
+				</ol>
+			</div>
 		</div>
-		<div class="pagecontent sectionid1">
+		<div class="pagecontent sectionid1 left">
 			<h2>Applying for ETS2MCG</h2>
 			<p>If you meet all of the requirements below, you may apply for ETS2MCG member.</p>
 			<ul>
@@ -148,25 +158,35 @@
 					}
 				}
 			</style>
-			<a target="_blank" class="snsButton" style="width: 90%; margin: 0 auto; display: block;" id="applyButton" href="https://apply.ets2mcg.org">Apply to ETS2MCG Team!</a>
-			<p>You can also join our Discord server <a class="text" target="_blank" href="https://discord.gg/vez83th">here</a>.
-				Feel free to ask if you have any questions! And you can contact us via email by clicking <a class="text" target="_blank" href="mailto:contact@ets2mcg.org">here too.</a>
+			<a target="_blank" class="snsButton" style="width: 90%; margin: 0 auto; display: block;" id="applyButton"
+				href="https://apply.ets2mcg.org">Apply to ETS2MCG Team!</a>
+			<p>You can also join our Discord server <a class="text" target="_blank"
+					href="https://discord.gg/vez83th">here</a>.
+				Feel free to ask if you have any questions! And you can contact us via email by clicking <a class="text"
+					target="_blank" href="mailto:contact@ets2mcg.org">here too.</a>
 			</p>
 		</div>
-		<div class="pagecontent">
+		<div class="pagecontent center">
 			<h2>Let's stay connected.</h2>
 			<p>ETS2MCG team has Facebook group, YouTube channel, Steam group. We hope to see you there!</p>
 			<div id="snsFrame">
 				<div style="margin: 0 auto; display: block; width: 95%;">
-					<a target="_blank" class="snsButton" style="background: linear-gradient(110deg, #ff6b6b, #bb0000 90%);" href="https://truckersmp.com/vtc/387">TruckersMP VTC Page</a>
-					<a target="_blank" class="snsButton" style="background: #bb0000;" href="https://www.youtube.com/channel/UCVOWxE3zbIjnXdJB7mzyckw">YouTube</a>
+					<a target="_blank" class="snsButton"
+						style="background: linear-gradient(110deg, #ff6b6b, #bb0000 90%);"
+						href="https://truckersmp.com/vtc/387">TruckersMP VTC Page</a>
+					<a target="_blank" class="snsButton" style="background: #bb0000;"
+						href="https://www.youtube.com/channel/UCVOWxE3zbIjnXdJB7mzyckw">YouTube</a>
 				</div>
 				<div style="margin: 0 auto; display: block; width: 95%;">
-					<a target="_blank" class="snsButton" style="background: linear-gradient(110deg, #004675, #14a1ff);" href="https://www.facebook.com/groups/ETS2MCG/">Facebook Group</a>
-					<a target="_blank" class="snsButton" style="background: linear-gradient(110deg, #2d88ff, #00235e);" href="https://www.facebook.com/ETS2MCG/">Facebook Page</a>
+					<a target="_blank" class="snsButton" style="background: linear-gradient(110deg, #004675, #14a1ff);"
+						href="https://www.facebook.com/groups/ETS2MCG/">Facebook Group</a>
+					<a target="_blank" class="snsButton" style="background: linear-gradient(110deg, #2d88ff, #00235e);"
+						href="https://www.facebook.com/ETS2MCG/">Facebook Page</a>
 				</div>
 				<div style="margin: 0 auto; display: block; width: 95%;">
-					<a target="_blank" class="snsButton" style="background: linear-gradient(110deg, #171a21, #183d58); margin: 5 auto; display: block;" href="https://steamcommunity.com/groups/teamets2mcg">Steam Group</a>
+					<a target="_blank" class="snsButton"
+						style="background: linear-gradient(110deg, #171a21, #183d58); margin: 5 auto; display: block;"
+						href="https://steamcommunity.com/groups/teamets2mcg">Steam Group</a>
 				</div>
 			</div>
 		</div>
@@ -177,6 +197,17 @@
 	</div>
 
 	<script>
+		let params = new URLSearchParams(location.search);
+		if(params.has("autoRedirect")) {
+			let param = params.get("autoRedirect");
+			if(param === "en_us") {
+				$("#langWarning").detach();
+			} else {
+				$("#langWarning").show();
+			}
+		} else {
+			$("#langWarning").detach();
+		}
 		// Slideshow
 		function resizeSlideshow() {
 			let slideshow = $("#slideshow");
@@ -184,6 +215,9 @@
 
 			let resized = () => {
 				slideshow.height(header.height());
+				slideshow.css({
+					top: header.offset().top
+				})
 			}
 			window.onresize = resized;
 			resized();
@@ -200,8 +234,9 @@
 
 		var slideIndex = 0;
 		var first = true;
-		loadSlideshowSlides();
-		carousel();
+		loadSlideshowSlides().then(() => {
+			carousel();
+		});
 		function carousel() {
 
 			if (!document.hidden) {
