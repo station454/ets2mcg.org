@@ -25,7 +25,7 @@
             });
 
             let targetUrl = `${selectedLanguage}/index.html?autoRedirect=${selectedLanguage}`;
-            location.replace(targetUrl);
+            location.href = targetUrl;
             document.getElementById("targetUrl").setAttribute("href", targetUrl);
         </script>
     </body>
