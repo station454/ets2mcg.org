@@ -186,8 +186,7 @@ ul#menubar li:hover {
 }
 
 ul#menubar li.current {
-    background-color: #c7ffb6;
-    color: black;
+    background-color: #00000046;
 }
 
 .mcglogo {
